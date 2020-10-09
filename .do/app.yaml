@@ -4,5 +4,5 @@ static_sites:
     github:
       branch: master
       deploy_on_push: true
-      repo: janchu/janne-io
+      repo: Janchu/janne-io
     name: janne-io
