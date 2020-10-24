@@ -1,3 +1,3 @@
-# janne-io
+# janne.io
 
-My personal website.
+Created with Gatsby.js using mdx

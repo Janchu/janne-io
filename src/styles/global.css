@@ -2,12 +2,16 @@
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
+  background-color: #2a2a2a;
+  color: #ffffff;
 }
 
 body {
   margin: 0;
-  background-color: #2a2a2a;
-  color: #ffffff;
+}
+
+.container {
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   min-height: 100%;
