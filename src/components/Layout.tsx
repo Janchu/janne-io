@@ -1,7 +1,5 @@
-import React from "react"
-
-import Header from "./header"
-import Footer from "./footer"
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
@@ -10,5 +8,5 @@ export default function Layout({ children }) {
       <main className="container">{children}</main>
       <Footer />
     </>
-  )
+  );
 }

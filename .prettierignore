@@ -1,4 +1,7 @@
 .cache
 package.json
 package-lock.json
+pnpm-lock.json
 public
+.next
+_static
