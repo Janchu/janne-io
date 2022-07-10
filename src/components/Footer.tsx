@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
-    <footer>
-      <a className="footer-link" href="https://github.com/Janchu">
+    <footer className="flex justify-center">
+      <a className="font-semibold underline mx-1" href="https://github.com/Janchu">
         Github
       </a>
       <a
-        className="footer-link"
+        className="font-semibold underline mx-1"
         href="https://www.linkedin.com/in/jannejäppinen/"
       >
         LinkedIn

@@ -2,93 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Layout */
 html {
+  @apply h-full;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100%;
   background-color: #2a2a2a;
   color: #ffffff;
 }
 
 body {
-  margin: 0;
+  @apply h-full;
 }
 
-.container {
-  margin: 3rem auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-header,
-main,
-footer {
-  width: 100%;
-  max-width: 1080px;
-  margin: auto;
-  padding-left: 32px;
-  padding-right: 32px;
-  box-sizing: border-box;
-}
-
-main,
-footer {
-  margin-top: 32px;
-  margin-bottom: 32px;
+div#__next {
+  @apply h-full;
 }
 
 main {
-  flex: 1;
-}
-
-footer {
-  text-align: center;
-}
-
-section.text-section {
-  margin-top: 64px;
-  margin-bottom: 64px;
-}
-
-/* Avatar */
-
-div.avatarContainer {
-  display: flex;
-  justify-content: center;
-}
-
-img.avatar {
-  border-radius: 50%;
-}
-
-/* Text and links */
-h1 {
-  font-weight: 700;
-}
-
-h2,
-p {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-h2.title {
-  text-align: center;
-}
-
-b {
-  font-weight: 800;
-}
-
-a {
-  font-weight: 600;
-  color: #ffffff;
-}
-
-a.footer-link {
-  margin-right: 4px;
-  margin-left: 4px;
+  @apply h-full;
 }
 
 .highlight {
@@ -105,15 +35,4 @@ a.footer-link {
 
 .react {
   color: #61dafb;
-}
-
-/* Responsive */
-@media only screen and (max-width: 768px) {
-  img.avatar {
-    height: 150px;
-  }
-  section.text-section {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
 }
