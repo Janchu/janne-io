@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^2.0.17
   '@types/node': ^18.14.4
   '@types/react': ^18.0.28
   autoprefixer: ^10.4.13
@@ -16,6 +17,7 @@ specifiers:
   typescript: ^4.9.5
 
 dependencies:
+  '@heroicons/react': 2.0.17_react@18.2.0
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -29,7 +31,7 @@ devDependencies:
   eslint-config-prettier: 8.6.0_eslint@8.35.0
   postcss: 8.4.21
   prettier: 2.8.4
-  tailwindcss: 3.2.7
+  tailwindcss: 3.2.7_postcss@8.4.21
   typescript: 4.9.5
 
 packages:
@@ -62,6 +64,14 @@ packages:
     resolution: {integrity: sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@heroicons/react/2.0.17_react@18.2.0:
+    resolution: {integrity: sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -2281,10 +2291,12 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /tailwindcss/3.2.7:
+  /tailwindcss/3.2.7_postcss@8.4.21:
     resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
