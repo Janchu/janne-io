@@ -1,20 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState<"dark" | "light">("light");
 
-  function handleToggleTheme(e) {
-    if (theme === "light") {
-      localStorage.theme = "dark";
-      document.documentElement.classList.add("dark");
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
       setTheme("dark");
     }
+  }, []);
+
+  useEffect(() => {
     if (theme === "dark") {
-      localStorage.theme = "light";
-      document.documentElement.classList.remove("dark");
-      setTheme("light");
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
     }
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    }
+  }, [theme]);
+
+  function handleToggleTheme(e) {
+    setTheme(e.target.checked ? "dark" : "light");
   }
 
   return (
@@ -32,6 +44,7 @@ export default function Header() {
             id="themeToggle"
             className="sr-only peer"
             onChange={handleToggleTheme}
+            checked={theme === "dark"}
           />
           <span className="w-6 h-6 bg-gray-600 rounded-full absolute left-1 top-1 peer-checked:bg-gray-300 peer-checked:left-9 transition-all duration-200" />
         </label>
