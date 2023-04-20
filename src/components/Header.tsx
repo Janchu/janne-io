@@ -30,7 +30,7 @@ export default function Header() {
   }
 
   return (
-    <header className="mb-16 py-4 flex justify-between">
+    <header className="mb-12 py-4 flex justify-between">
       <h1 className="font-bold text-3xl">janne.io</h1>
 
       <div className="flex items-center gap-2">
