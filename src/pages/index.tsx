@@ -1,11 +1,48 @@
+import React from "react";
 import Image from "next/image";
-import Card from "../components/Card";
 import {
   BuildingOfficeIcon,
   CodeBracketIcon,
+  CommandLineIcon,
   LinkIcon,
   MapPinIcon,
+  ServerIcon,
+  ServerStackIcon,
 } from "@heroicons/react/24/outline";
+import Card from "../components/Card";
+import Hightlight from "../components/Highlight";
+
+export type ProjectItem = {
+  name: string;
+  description: string;
+  url?: string;
+  icon?: React.ReactNode;
+  keywords?: string[];
+};
+
+const projects: ProjectItem[] = [
+  {
+    name: "OJK Discord Bot",
+    description: "A discord bot developed for a group of friends.",
+    url: "https://github.com/Janchu/ojk-discord-bot",
+    icon: <CodeBracketIcon className="h-6 w-6" />,
+    keywords: ["Discord.js", "Node.js"],
+  },
+  {
+    name: "janne.io",
+    description: "This portfolio website.",
+    url: "https://github.com/Janchu/janne-io",
+    icon: <CodeBracketIcon className="h-6 w-6" />,
+    keywords: ["NextJS", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+  },
+  {
+    name: "Home server",
+    description:
+      "My personal home server that serves as a NAS and the hub for my home automation.",
+    icon: <ServerStackIcon className="h-6 w-6" />,
+    keywords: ["Unraid", "NAS", "Docker", "Home Assistant"],
+  },
+];
 
 const HomePage = () => (
   <section className="grid grid-cols-12 gap-4">
@@ -14,12 +51,56 @@ const HomePage = () => (
         <h1 className="font-bold my-4 text-2xl">
           Hi! I&apos;m Janne and I like to code.
         </h1>
-        <p>
-          I&apos;m a <b className="highlight">software developer</b>. My
-          favorite language is <b className="js">Javascript</b> and I especially
-          like creating applications with technologies like{" "}
-          <b className="react">React</b> and <b className="nodejs">Node.js</b>.
+        <p className="leading-7 my-2">
+          I&apos;m a <Hightlight>software developer.</Hightlight> I have
+          experience in many areas of software development but I&apos;m most
+          passionate about <Hightlight>frontend development</Hightlight> and
+          providing end users the best possible{" "}
+          <Hightlight>user experience.</Hightlight> I like to try out new things
+          and experiment with new technologies to broaden my understanding and
+          keep up with the rapidly evolving world of software development.
         </p>
+        <p className="">
+          If you like what you&apos;re seeing here, feel free to{" "}
+          <Hightlight>message me on LinkedIn</Hightlight> or star my Github
+          repositories.
+        </p>
+      </Card>
+      <Card>
+        <h1 className="font-bold my-4 text-2xl">My projects</h1>
+        <ul>
+          {projects.map((project) => (
+            <li className="flex gap-4 my-4 items-center" key={project.name}>
+              {project.icon}
+              <div className="flex flex-col gap-2">
+                <div>
+                  <h4 className="font-bold">
+                    {project.url ? (
+                      <a href={project.url} className="hover:underline">
+                        {project.name}
+                      </a>
+                    ) : (
+                      project.name
+                    )}
+                  </h4>
+                  <p className=" text-gray-700 dark:text-gray-300 ">
+                    {project.description}
+                  </p>
+                </div>
+                <div className="flex flex-row flex-wrap gap-1">
+                  {project.keywords?.map((keyword) => (
+                    <span
+                      key={keyword}
+                      className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full text-xs"
+                    >
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </Card>
     </div>
     <div className="col-span-12 md:col-span-4 order-first md:order-last">

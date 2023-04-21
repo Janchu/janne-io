@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.highlight {
-  color: #ff6aa3;
-}
-
-.js {
-  color: #f0db4f;
-}
-
-.nodejs {
-  color: #689f63;
-}
-
-.react {
-  color: #61dafb;
-}
-
 @font-face {
   font-family: "Inter";
   font-style: normal;
