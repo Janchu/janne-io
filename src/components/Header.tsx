@@ -36,6 +36,7 @@ export default function Header() {
       <div className="flex items-center gap-2">
         <SunIcon className="h-6 w-6" />
         <label
+          aria-label="Toggle theme"
           htmlFor="themeToggle"
           className="relative bg-white dark:bg-gray-800 w-16 h-8 rounded-full"
         >
