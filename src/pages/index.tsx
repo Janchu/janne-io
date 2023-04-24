@@ -26,21 +26,21 @@ const projects: ProjectItem[] = [
     name: "OJK Discord Bot",
     description: "A discord bot developed for a group of friends.",
     url: "https://github.com/Janchu/ojk-discord-bot",
-    icon: <CodeBracketIcon className="h-6 w-6" />,
+    icon: <CodeBracketIcon className="h-6 w-6 flex-shrink-0" />,
     keywords: ["Discord.js", "Node.js"],
   },
   {
     name: "janne.io",
     description: "This portfolio website.",
     url: "https://github.com/Janchu/janne-io",
-    icon: <CodeBracketIcon className="h-6 w-6" />,
+    icon: <CodeBracketIcon className="h-6 w-6 flex-shrink-0" />,
     keywords: ["NextJS", "React", "Tailwind CSS", "TypeScript", "Vercel"],
   },
   {
     name: "Home server",
     description:
       "My personal home server that serves as a NAS and the hub for my home automation.",
-    icon: <ServerStackIcon className="h-6 w-6" />,
+    icon: <ServerStackIcon className="h-6 w-6 flex-shrink-0" />,
     keywords: ["Unraid", "NAS", "Docker", "Home Assistant"],
   },
 ];
