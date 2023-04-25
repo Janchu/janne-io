@@ -139,7 +139,7 @@ const HomePage = () => (
                 <span>
                   Software Developer at{" "}
                   <a
-                    className="font-medium underline transition text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
+                    className="font-medium underline hover:transition-colors text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
                     href="https://www.smartum.fi/"
                   >
                     Smartum Oy
@@ -150,7 +150,7 @@ const HomePage = () => (
               <div className="flex gap-2 items-center">
                 <CodeBracketIcon className="h-6 w-6 flex-shrink-0" />
                 <a
-                  className="font-medium underline transition text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
+                  className="font-medium underline hover:transition-colors text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
                   href="https://github.com/Janchu"
                 >
                   Github
@@ -160,7 +160,7 @@ const HomePage = () => (
               <div className="flex gap-2 items-center">
                 <LinkIcon className="h-6 w-6 flex-shrink-0" />
                 <a
-                  className="font-medium underline transition text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
+                  className="font-medium underline hover:transition-colors text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
                   href="https://www.linkedin.com/in/jannejäppinen/"
                 >
                   LinkedIn
