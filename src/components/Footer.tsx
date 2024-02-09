@@ -5,19 +5,19 @@ export default function Footer() {
 				<h1 className="font-bold text-lg text-gray-500 col-span-4">janne.io</h1>
 				<div className="flex gap-6 flex-wrap col-span-8 items-center">
 					<a
-						className="hover:transition-colors text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-400"
+						className="underline hover:transition-colors text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-400"
 						href="https://github.com/Janchu"
 					>
 						Github
 					</a>
 					<a
-						className="hover:transition-colors text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-400"
+						className="underline hover:transition-colors text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-400"
 						href="https://www.linkedin.com/in/jannejäppinen/"
 					>
 						LinkedIn
 					</a>
 					<a
-						className="hover:transition-colors text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-400"
+						className="underline hover:transition-colors text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-400"
 						href="https://mas.to/@janchu"
 					>
 						Mastodon

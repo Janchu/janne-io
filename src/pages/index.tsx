@@ -12,16 +12,9 @@ import {
 import Card from "../components/Card";
 import Hightlight from "../components/Highlight";
 import Head from "next/head";
+import ProjectItem, { ProjectItemType } from "../components/ProjectItem";
 
-export type ProjectItem = {
-  name: string;
-  description: string;
-  url?: string;
-  icon?: React.ReactNode;
-  keywords?: string[];
-};
-
-const projects: ProjectItem[] = [
+const projects: ProjectItemType[] = [
   {
     name: "OJK Discord Bot",
     description: "A discord bot developed for a group of friends.",
@@ -56,7 +49,7 @@ const HomePage = () => (
           <h1 className="font-bold my-4 text-2xl">
             Hi! I&apos;m Janne and I like to code.
           </h1>
-          <p className="leading-7 my-2">
+          <p className="leading-7 my-4">
             I&apos;m a <Hightlight>software developer.</Hightlight> I have
             experience in many areas of software development but I&apos;m most
             passionate about <Hightlight>frontend development</Hightlight> and
@@ -74,36 +67,10 @@ const HomePage = () => (
         </Card>
         <Card>
           <h1 className="font-bold my-4 text-2xl">My projects</h1>
-          <ul>
+          <ul className="flex flex-col gap-6">
             {projects.map((project) => (
-              <li className="flex gap-4 my-4 items-center" key={project.name}>
-                {project.icon}
-                <div className="flex flex-col gap-2">
-                  <div>
-                    <h2 className="font-bold">
-                      {project.url ? (
-                        <a href={project.url} className="hover:underline">
-                          {project.name}
-                        </a>
-                      ) : (
-                        project.name
-                      )}
-                    </h2>
-                    <p className=" text-gray-700 dark:text-gray-300 ">
-                      {project.description}
-                    </p>
-                  </div>
-                  <div className="flex flex-row flex-wrap gap-1">
-                    {project.keywords?.map((keyword) => (
-                      <span
-                        key={keyword}
-                        className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full text-xs"
-                      >
-                        {keyword}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              <li className="flex w-full" key={project.name}>
+                <ProjectItem {...project} />
               </li>
             ))}
           </ul>
