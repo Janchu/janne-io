@@ -22,14 +22,17 @@ export default function ProjectItem({
         <div>
           <h2 className="font-bold">
             {url ? (
-              <a href={url} className="underline hover:text-gray-600 dark:hover:text-gray-400">
+              <a
+                href={url}
+                className="underline hover:text-gray-600 dark:hover:text-gray-400"
+              >
                 {name}
               </a>
             ) : (
               name
             )}
           </h2>
-          <p className="text-gray-700 dark:text-gray-300 ">{description}</p>
+          <p className="text-gray-700 dark:text-gray-300">{description}</p>
         </div>
         <div className="flex flex-row flex-wrap gap-1">
           {keywords?.map((keyword) => (
