@@ -1,5 +1,10 @@
 module.exports = {
   images: {
-    domains: ["avatars0.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: '"avatars0.githubusercontent.com"',
+      },
+    ],
   },
 };
