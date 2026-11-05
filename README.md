@@ -12,6 +12,8 @@ For local development with the Tailwind CLI:
 ```bash
 # Install Tailwind CSS globally (one time)
 npm install -g tailwindcss
+# or
+brew install tailwindcss
 
 # Generate CSS
 npx tailwindcss -i input.css -o output.css --watch
@@ -21,10 +23,6 @@ python3 -m http.server 8000
 ```
 
 ## Development
-
-### Using CDN (Simplest)
-1. Open `index.html` directly in your browser
-2. Edit the file and refresh
 
 ### Using Tailwind CLI
 1. Run `npx tailwindcss -i input.css -o output.css --watch`
