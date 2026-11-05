@@ -1,36 +1,5 @@
 {
   "name": "janne-io",
-  "description": "janne.io website",
-  "version": "0.1.0",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint .",
-    "export": "npm run build && next export -o _static"
-  },
-  "dependencies": {
-    "@heroicons/react": "^2.1.1",
-    "@vercel/analytics": "^1.2.2",
-    "@vercel/speed-insights": "^1.0.10",
-    "next": "16.2.11",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
-    "@types/node": "^25.2.3",
-    "@types/react": "19.2.14",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "eslint-config-prettier": "^9.1.0",
-    "postcss": "^8.5.10",
-    "prettier": "^3.2.5",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.3.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Janchu/janne-io"
-  }
+  "description": "janne.io static portfolio",
+  "version": "1.0.0"
 }
