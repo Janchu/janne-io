@@ -3,7 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /*--font-sans: InterVariable, Inter, sans-serif;*/
   --font-sans: sans-serif;
   --color-latte-base: #eff1f5;
   --color-latte-mantle: #e6e9ef;
@@ -39,19 +38,3 @@
   --color-mocha-yellow: #f9e2af;
 }
 
-/* Inter Variable Font */
-@font-face {
-  font-family: 'InterVariable';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('assets/fonts/Inter/InterVariable.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'InterVariable';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('assets/fonts/Inter/InterVariable-Italic.woff2') format('woff2');
-}
