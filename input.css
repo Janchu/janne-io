@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -37,4 +37,3 @@
   --color-mocha-red: #f38ba8;
   --color-mocha-yellow: #f9e2af;
 }
-
